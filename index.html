@@ -311,6 +311,52 @@
       height: 100%;
       background: #3590d2;
     }
+    @media screen and (max-width: 425px)
+    {
+      .container
+      {
+        margin: 10px;
+      }
+
+      .container .contentBox
+      {
+        padding: 0;
+      }
+
+      .container .top
+      {
+        grid-template-columns: 1fr;
+      }
+
+      .container .top .profileText
+      {
+          padding: 0;
+      }
+
+      .container .top .profileText h3
+      {
+        text-align: center;
+      }
+
+      .container .top .imgBx {
+        justify-content: center;
+      }
+
+      .container .rightSide
+      {
+        padding-left: 0;
+      }
+
+      .container .contentBox ul.language .percent
+      {
+        width: 90%;
+      }
+
+      .about .box
+      {
+        flex-direction: column;
+      }
+    }
 
     @media screen and (max-width: 620px) 
     {
@@ -386,7 +432,7 @@
           <li>
             <span class="text">Inglés</span> 
             <span class="percent">
-              <div style="width: 50%;"></div>
+              <div style="width: 60%;"></div>
             </span>
           </li>
           <li>
