@@ -137,12 +137,26 @@
       color: #333;
     }
 
+    .container .contentBox ul li .horizontal-icons
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -25px 0;
+      gap: 10px;
+    }
 
     .container .contentBox ul li ion-icon
     {
       font-size: 1.2em;
       margin-right: 10px;
       color: #3590d2;
+      pointer-events: none;
+    }
+
+    .container .contentBox ul li .horizontal-icons ion-icon
+    {
+      font-size: 1.8em;
     }
 
     .container .contentBox ul.education li
@@ -393,12 +407,17 @@
         <h3>Información de Contacto</h3>
         <ul>
           <li>
-            <span class="icon"><ion-icon name="call-outline"></ion-icon></span>
-            <span class="text"><a href="tel://+34608061645">+34 608 06 16 45</a></span>
-          </li>
-          <li>
-            <span class="icon"><ion-icon name="mail-outline"></ion-icon></span>
-            <span class="text"><a href="mail://alberto.massanet@gmail.com">alberto.massanet@gmail.com</a></span>
+            <ul class="horizontal-icons">
+              <li>
+                <span class="text" id="tel"><a href="#"><span class="icon"><ion-icon name="call-outline"></ion-icon></span></a></span>
+              </li>
+              <li>                
+                <span class="text" id="mail"><a href="#"><span class="icon"><ion-icon name="mail-outline"></ion-icon></span></a></span>
+              </li>
+              <li>
+                <span class="text" title="LinkedIn"><a href="https://www.linkedin.com/in/albertomassanet/"><span class="icon"><ion-icon name="logo-linkedin"></ion-icon></span></a></span>
+              </li>
+            </ul>
           </li>
           <li>
             <span class="icon"><ion-icon name="globe-outline"></ion-icon></span>
@@ -585,6 +604,16 @@
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    const t = document.querySelector('#tel');
+    const t_a = t.querySelector('a');
+    const m = document.querySelector('#mail');
+    const m_a = m.querySelector('a');
+    t.setAttribute('title', atob('KzM0IDYwOCAwNiAxNiA0NQ=='));
+    t_a.setAttribute('href', 'tel://' + atob('KzM0IDYwOCAwNiAxNiA0NQ=='));
+    m.setAttribute('title', atob('YWxiZXJ0by5tYXNzYW5ldEBnbWFpbC5jb20='));
+    m_a.setAttribute('href', 'mailto://' + atob('YWxiZXJ0by5tYXNzYW5ldEBnbWFpbC5jb20='))
+  </script>
 
 </body>
 </html>
